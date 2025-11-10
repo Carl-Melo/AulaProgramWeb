@@ -191,3 +191,155 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     transform: translateY(0); /* Volta ao normal ao clicar */
 }
+
+
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 50px 20px;
+}
+
+.page-title {
+    color: rgb(106, 144, 228);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.gallery-description {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Cria 3 colunas em telas grandes, ajustável em telas menores */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 200px; /* Altura fixa para as miniaturas */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(106, 144, 228, 0.7);
+}
+
+/* ------------------------------------------- */
+/* ESTILOS DO MODAL (Pop-up) */
+/* ------------------------------------------- */
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 2000; /* Acima de todo o conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.modal-image {
+    max-width: 85vw; /* 85% da largura da tela */
+    max-height: 85vh; /* 85% da altura da tela */
+    display: block;
+    margin: 0 10px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    border-radius: 8px;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.8);} 
+    to {transform: scale(1);}
+}
+
+/* Botão de Fechar (Close) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #f7d04e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Legenda da Imagem */
+.caption {
+    margin-top: 15px;
+    text-align: center;
+    color: #ccc;
+    font-size: 1.1em;
+    max-width: 90%;
+}
+
+/* Botões de Navegação (Anterior/Próximo) */
+.prev-btn, .next-btn {
+    cursor: pointer;
+    position: relative;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px; /* Aumentado um pouco para visibilidade */
+    transition: 0.6s ease;
+    border-radius: 8px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    margin: 0 10px;
+    z-index: 10; /* Garante que fiquem sobre a imagem */
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f7d04e;
+}
+
+/* Ajustes para Responsividade do Modal */
+@media only screen and (max-width: 700px) {
+    .modal-image {
+        max-width: 95vw;
+        max-height: 70vh;
+    }
+    .prev-btn, .next-btn {
+        font-size: 16px;
+        padding: 10px;
+        margin: 0 5px;
+    }
+}
