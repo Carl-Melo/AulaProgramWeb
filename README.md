@@ -1,4 +1,4 @@
-# Projeto ONG Nova História -Material descritivo
+# Projeto ONG Nova História
 
 ## 1. Sobre a ONG Nova História
 
@@ -14,11 +14,11 @@ oferecendo suporte através de pilares essenciais como educação, saúde, bem-e
 
 - **Visão:** Ser reconhecida nacionalmente como uma referência em transformação social e apoio comunitário, capacitando milhares de pessoas a reescreverem suas próprias histórias.
 
-##Valores Essenciais
+## Valores Essenciais
 
 - **Empatia e Respeito:** Colocar as necessidades dos vulneráveis em primeiro lugar, tratando todos com dignidade.
 
--**Transparência:** Garantir a clareza na gestão de recursos e na prestação de contas dos projetos.
+- **Transparência:** Garantir a clareza na gestão de recursos e na prestação de contas dos projetos.
 
 - **Colaboração:** Acreditar no poder da união entre voluntários, parceiros e a comunidade.
 
